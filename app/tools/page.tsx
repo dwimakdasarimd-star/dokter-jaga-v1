@@ -4,6 +4,7 @@ import { useMemo, useState } from 'react'
 import ToolStyles from './ToolStyles'
 import FluidGuide from './FluidGuide'
 import AcidBaseTool from './AcidBaseTool'
+import AdvancedCalculators from './AdvancedCalculators'
 
 type Tool = 'bmi' | 'egfr' | 'crcl' | 'bsa' | 'gcs' | 'map' | 'shock' | 'anion' | 'correctedNa' | 'pedsFluid' | 'tpm' | 'acidBase'
 
@@ -66,7 +67,6 @@ export default function ToolsPage(){
         <aside className="tool-sidebar"><div className="tool-side-label">ALL TOOLS</div>{filtered.map(t=><button key={t.id} onClick={()=>selectTool(t.id)} className={`tool-nav ${active===t.id?'active':''}`}><span>{t.icon}</span><div><strong>{t.title}</strong><small>{t.category}</small></div></button>)}</aside>
         <main className="tool-workspace">
           <div className="tool-workspace-top"><div><span className="meta">CALCULATOR</span><h2>{activeTitle}</h2></div><span className="tool-status">Educational tool</span></div>
-
           {active==='bmi'&&<div className="tool-panel"><div className="tool-fields"><Field label="Berat badan" value={weight} onChange={setWeight} unit="kg"/><Field label="Tinggi badan" value={height} onChange={setHeight} unit="cm"/></div><div className="result-grid"><Result label="BMI" value={Number.isFinite(bmi)?bmi.toFixed(1):'—'} note={Number.isFinite(bmi)?bmi<18.5?'Underweight':bmi<25?'Normal':bmi<30?'Overweight':'Obesity':undefined}/><Result label="BSA" value={Number.isFinite(bsa)?`${bsa.toFixed(2)} m²`:'—'}/></div><p className="tool-note">Kategori BMI dapat berbeda menurut populasi dan konteks klinis.</p></div>}
           {active==='bsa'&&<div className="tool-panel"><div className="tool-fields"><Field label="Berat badan" value={weight} onChange={setWeight} unit="kg"/><Field label="Tinggi badan" value={height} onChange={setHeight} unit="cm"/></div><Result label="Mosteller BSA" value={Number.isFinite(bsa)?`${bsa.toFixed(2)} m²`:'—'}/><p className="tool-note">Pastikan obat atau intervensi memang direkomendasikan menggunakan BSA.</p></div>}
           {active==='egfr'&&<div className="tool-panel"><div className="tool-fields"><Field label="Serum creatinine" value={scr} onChange={setScr} unit="mg/dL"/><Field label="Usia" value={age} onChange={setAge} unit="tahun"/><label className="tool-field"><span>Jenis kelamin</span><select value={sex} onChange={e=>setSex(e.target.value as 'male'|'female')}><option value="male">Laki-laki</option><option value="female">Perempuan</option></select></label></div><Result label="eGFR CKD-EPI 2021" value={Number.isFinite(egfr)?`${egfr.toFixed(1)} mL/min/1.73 m²`:'—'}/><p className="tool-note">Estimasi berbasis creatinine, bukan pengukuran GFR langsung.</p></div>}
@@ -81,6 +81,7 @@ export default function ToolsPage(){
           {active==='pedsFluid'&&<div className="tool-panel"><Field label="Berat badan anak" value={fluidWeight} onChange={setFluidWeight} unit="kg" placeholder="25"/><div className="result-grid"><Result label="Maintenance / jam" value={Number.isFinite(maintenance)?`${maintenance.toFixed(1)} mL/jam`:'—'}/><Result label="Maintenance / 24 jam" value={Number.isFinite(maintenance)?`${(maintenance*24).toFixed(0)} mL/hari`:'—'}/></div><p className="tool-note">Holliday–Segar: 4 mL/kg/jam untuk 10 kg pertama, 2 mL/kg/jam untuk 10 kg berikutnya, lalu 1 mL/kg/jam.</p></div>}
         </main>
       </div>
+      <AdvancedCalculators/>
       <FluidGuide/>
     </div>
   </>
