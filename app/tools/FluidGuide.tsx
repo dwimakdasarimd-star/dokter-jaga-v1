@@ -1,4 +1,35 @@
-export default function FluidGuide(){return <section className="fluid-guide">
+'use client'
+
+import { useEffect } from 'react'
+
+function syncTPM(){
+  const panels=document.querySelectorAll<HTMLElement>('.tpm-panel')
+  panels.forEach(panel=>{
+    const inputs=panel.querySelectorAll<HTMLInputElement>('input')
+    const select=panel.querySelector('select') as HTMLSelectElement|null
+    const results=panel.querySelectorAll<HTMLElement>('.tpm-results .tool-result strong')
+    if(inputs.length<2||!select||results.length<2)return
+    const parse=(value:string)=>Number(value.trim().replace(/\s/g,'').replace(',','.'))
+    const volume=parse(inputs[0].value)
+    const hours=parse(inputs[1].value)
+    const factor=parse(select.value)
+    if(!Number.isFinite(volume)||volume<=0||!Number.isFinite(hours)||hours<=0||!Number.isFinite(factor)||factor<=0)return
+    const gtt=Math.round((volume*factor)/(hours*60))
+    const mlhr=volume/hours
+    const next=[`${gtt} tetes/menit`,`${mlhr.toFixed(1)} mL/jam`]
+    results.forEach((el,i)=>{if(el.textContent!==next[i])el.textContent=next[i]})
+  })
+}
+
+export default function FluidGuide(){
+  useEffect(()=>{
+    const observer=new MutationObserver(()=>setTimeout(syncTPM,0))
+    observer.observe(document.body,{subtree:true,childList:true,characterData:true})
+    const timer=window.setTimeout(syncTPM,100)
+    return()=>{observer.disconnect();window.clearTimeout(timer)}
+  },[])
+
+  return <section className="fluid-guide">
 <div className="fluid-guide-head"><div><span className="meta">IV FLUID GUIDE</span><h2>Pemilihan Cairan Infus</h2><p>Mulai dari tujuan terapi: <strong>resusitasi, maintenance, replacement, atau redistribution</strong>. Jenis cairan tidak dipilih hanya berdasarkan diagnosis.</p></div><span className="tool-status">Adult + Pediatrics</span></div>
 <div className="fluid-principle"><strong>5R</strong><span>Resuscitation</span><span>Routine maintenance</span><span>Replacement</span><span>Redistribution</span><span>Reassessment</span></div>
 <div className="fluid-tabs">
@@ -10,4 +41,5 @@ export default function FluidGuide(){return <section className="fluid-guide">
 <div className="fluid-redflags"><h3>⚠️ Perlu modifikasi / expert input</h3><div><span>♥ Heart failure / cardiogenic shock</span><span>🫘 AKI / CKD berat</span><span>🧠 Raised ICP / CNS disease</span><span>🔥 Major burns</span><span>🩸 Active haemorrhage</span><span>🧂 Severe Na abnormality</span><span>🧒 Neonates / NICU</span><span>🫁 Pulmonary oedema</span></div></div>
 <div className="fluid-monitor"><h3>Reassess setelah cairan</h3><div className="monitor-grid"><span><b>Perfusion</b> CRT, ekstremitas, mental status</span><span><b>Haemodynamics</b> BP, HR, pulse, dynamic response</span><span><b>Respiratory</b> work of breathing, SpO₂, pulmonary oedema</span><span><b>Renal</b> urine output, creatinine, electrolytes</span><span><b>Balance</b> input/output dan cumulative balance</span><span><b>Labs</b> Na, K, Cl, HCO₃, glucose sesuai kasus</span></div></div>
 <div className="fluid-reference"><strong>Guideline base:</strong> NICE CG174, NICE NG29, AAP maintenance IV fluids in children, dan Surviving Sepsis Campaign adult/pediatric guidance. Selalu cek versi terbaru dan protokol lokal.</div>
-</section>}
+</section>
+}
