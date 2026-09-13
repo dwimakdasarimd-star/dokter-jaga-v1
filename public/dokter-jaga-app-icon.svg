@@ -1,1 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0B3150"/><stop offset="1" stop-color="#087F76"/></linearGradient></defs><rect width="256" height="256" rx="62" fill="url(#bg)"/><circle cx="128" cy="126" r="83" fill="#8ED0F4" stroke="#D9F2F8" stroke-width="7"/><path d="M58 93c-4-27 9-52 33-62 22-9 46-2 61 15-18 2-33 10-45 24-10 12-15 25-16 41-15-3-26-9-33-18ZM198 93c4-27-9-52-33-62-22-9-46-2-61 15 18 2 33 10 45 24 10 12 15 25 16 41 15-3 26-9 33-18Z" fill="#6BB5E4"/><ellipse cx="93" cy="125" rx="43" ry="48" fill="#fff" stroke="#1E9F59" stroke-width="6"/><ellipse cx="163" cy="125" rx="43" ry="48" fill="#fff" stroke="#1E9F59" stroke-width="6"/><circle cx="98" cy="132" r="10" fill="#1267A8"/><circle cx="158" cy="132" r="10" fill="#1267A8"/><path d="M116 153c8 7 16 7 24 0" fill="none" stroke="#1267A8" stroke-width="4" stroke-linecap="round"/><path d="M128 132l-8 13h16Z" fill="#F2A62B"/><path d="M75 195c16-17 34-24 53-24s37 7 53 24l9 40H66Z" fill="#fff" stroke="#39708E" stroke-width="6"/><path d="M128 174v60" stroke="#C9DCE4" stroke-width="3"/><path d="M151 190h28M165 176v28" stroke="#1E9F59" stroke-width="5" stroke-linecap="round"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+<title id="title">Dokter Jaga app icon</title>
+<desc id="desc">A clean friendly owl head with a medical cross accent.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#0B3150"/>
+    <stop offset="1" stop-color="#087F76"/>
+  </linearGradient>
+  <linearGradient id="head" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#8ED0F4"/>
+    <stop offset="1" stop-color="#4D9DDB"/>
+  </linearGradient>
+</defs>
+<rect width="256" height="256" rx="58" fill="url(#bg)"/>
+<path d="M55 111C49 69 76 38 112 37c16 0 29 5 40 16 11-11 24-16 40-16 36 1 63 32 57 74-5 37-33 65-69 70h-56c-36-5-64-33-69-70Z" fill="url(#head)" stroke="#23649A" stroke-width="7"/>
+<path d="M67 89c3-23 18-39 38-44 16-4 31 0 43 11-20 2-35 11-45 27-6 9-9 19-10 31-13-5-21-13-26-25ZM189 89c-3-23-18-39-38-44-16-4-31 0-43 11 20 2 35 11 45 27 6 9 9 19 10 31 13-5 21-13 26-25Z" fill="#70B7E5"/>
+<ellipse cx="103" cy="122" rx="43" ry="47" fill="#fff" stroke="#1E9F59" stroke-width="6"/>
+<ellipse cx="153" cy="122" rx="43" ry="47" fill="#fff" stroke="#1E9F59" stroke-width="6"/>
+<circle cx="107" cy="128" r="11" fill="#1267A8"/>
+<circle cx="149" cy="128" r="11" fill="#1267A8"/>
+<circle cx="104" cy="125" r="3.5" fill="#fff"/>
+<circle cx="146" cy="125" r="3.5" fill="#fff"/>
+<path d="M118 151c7 6 13 6 20 0" fill="none" stroke="#1267A8" stroke-width="4" stroke-linecap="round"/>
+<path d="M128 130l-9 14h18Z" fill="#F2A62B" stroke="#C97916" stroke-width="2.5"/>
+<circle cx="205" cy="190" r="31" fill="#fff" stroke="#D9F2F8" stroke-width="5"/>
+<path d="M205 174v32M189 190h32" stroke="#1E9F59" stroke-width="7" stroke-linecap="round"/>
+</svg>
