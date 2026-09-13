@@ -9,7 +9,12 @@ import type { ReactNode } from 'react';
 export const metadata = {
   title: 'Dokter Jaga | Practical Clinical Education',
   description: 'Clinical education dan practical resources untuk dokter Indonesia.',
-  icons: { icon: '/dokter-jaga-app-icon.svg' },
+  manifest: '/manifest.json',
+  icons: {
+    icon: '/dokter-jaga-app-icon.svg',
+    shortcut: '/dokter-jaga-app-icon.svg',
+    apple: '/dokter-jaga-app-icon.svg',
+  },
 };
 
 const nav = [
@@ -24,13 +29,7 @@ function Brand({ mobile = false }: { mobile?: boolean }) {
   return (
     <Link href="/" className={mobile ? 'brand brand-mobile brand-mascot-lockup' : 'brand brand-mascot-lockup'} aria-label="Dokter Jaga">
       <span className="brand-mascot-wrap">
-        <Image
-          src="/dokter-jaga-mascot.svg"
-          alt=""
-          width={mobile ? 38 : 48}
-          height={mobile ? 44 : 54}
-          priority
-        />
+        <Image src="/dokter-jaga-mascot.svg" alt="" width={mobile ? 38 : 48} height={mobile ? 44 : 54} priority />
       </span>
       <span className="brand-wordmark">
         <strong><span>Dokter</span><em>Jaga</em></strong>
