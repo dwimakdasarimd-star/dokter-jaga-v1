@@ -1,4 +1,5 @@
 import './globals.css';
+import './home.css';
 import './cases/cases.css';
 import Link from 'next/link';
 
@@ -21,34 +22,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <div className="app-shell">
           <aside className="sidebar">
-            <Link href="/" className="brand">
-              <span className="brand-mark">+</span>
-              <span><strong>Dokter Jaga</strong><small>Clinical Platform</small></span>
-            </Link>
+            <Link href="/" className="brand"><span className="brand-mark">+</span><span><strong>Dokter Jaga</strong><small>Clinical Platform</small></span></Link>
             <div className="sidebar-label">WORKSPACE</div>
-            <nav className="side-nav">
-              {nav.map((item) => (
-                <Link href={item.href} key={item.href} className="side-link">
-                  <span className={`side-icon ${item.label === 'Emergency' ? 'danger-icon' : ''}`}>{item.icon}</span>
-                  <span>{item.label}</span>
-                </Link>
-              ))}
-            </nav>
+            <nav className="side-nav">{nav.map((item) => <Link href={item.href} key={item.href} className="side-link"><span className={`side-icon ${item.label === 'Emergency' ? 'danger-icon' : ''}`}>{item.icon}</span><span>{item.label}</span></Link>)}</nav>
             <div className="sidebar-label sidebar-label-spaced">LEARNING</div>
-            <nav className="side-nav">
-              <Link href="/membership" className="side-link"><span className="side-icon">★</span><span>Membership</span></Link>
-            </nav>
-            <div className="sidebar-bottom">
-              <div className="mini-card"><span className="mini-dot" /><div><strong>Clinical resources</strong><small>Updated regularly</small></div></div>
-              <p>Untuk edukasi. Verifikasi guideline, dosis, dan protokol lokal sebelum praktik.</p>
-            </div>
+            <nav className="side-nav"><Link href="/membership" className="side-link"><span className="side-icon">★</span><span>Membership</span></Link></nav>
+            <div className="sidebar-bottom"><div className="mini-card"><span className="mini-dot" /><div><strong>Clinical resources</strong><small>Updated regularly</small></div></div><p>Untuk edukasi. Verifikasi guideline, dosis, dan protokol lokal sebelum praktik.</p></div>
           </aside>
           <div className="main-shell">
-            <header className="topbar">
-              <div className="mobile-brand"><span className="brand-mark">+</span><strong>Dokter Jaga</strong></div>
-              <div className="top-search">⌕ <span>Cari kasus, diagnosis, obat, guideline...</span></div>
-              <div className="top-actions"><Link href="/membership" className="top-upgrade">Unlock more</Link><div className="avatar">DJ</div></div>
-            </header>
+            <header className="topbar"><div className="mobile-brand"><span className="brand-mark">+</span><strong>Dokter Jaga</strong></div><div className="top-search">⌕ <span>Cari kasus, diagnosis, obat, guideline...</span></div><div className="top-actions"><Link href="/membership" className="top-upgrade">Unlock more</Link><div className="avatar">DJ</div></div></header>
             <main>{children}</main>
             <footer>Dokter Jaga · Practical clinical education · 2026</footer>
           </div>
