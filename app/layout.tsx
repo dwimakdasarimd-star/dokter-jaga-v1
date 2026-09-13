@@ -1,0 +1,4 @@
+import './globals.css';
+import Link from 'next/link';
+export const metadata={title:'Dokter Jaga | Clinical Education',description:'Clinical education dan practical resources untuk dokter Indonesia.'};
+export default function RootLayout({children}:{children:React.ReactNode}){return <html lang="id"><body><header><Link href="/" className="brand">✚ Dokter Jaga</Link><nav><Link href="/cases">Cases</Link><Link href="/emergency">Emergency</Link><Link href="/tools">Tools</Link><Link href="/library">Library</Link><Link href="/membership">Membership</Link></nav></header><main>{children}</main><footer>Dokter Jaga · Practical clinical education · 2026</footer></body></html>}
