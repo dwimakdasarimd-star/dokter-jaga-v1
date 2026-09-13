@@ -1,4 +1,5 @@
 import './globals.css';
+import './cases/cases.css';
 import Link from 'next/link';
 
 export const metadata = {
