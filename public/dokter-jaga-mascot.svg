@@ -1,1 +1,41 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 420" role="img" aria-labelledby="title desc"><title id="title">Jaga — Dokter Jaga mascot</title><desc id="desc">Friendly owl medical mascot wearing a white coat and holding a clinical handbook.</desc><defs><linearGradient id="body" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8ED0F4"/><stop offset="1" stop-color="#4D9DDB"/></linearGradient><linearGradient id="coat" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#EAF3F7"/></linearGradient></defs><ellipse cx="180" cy="391" rx="104" ry="15" fill="#DCE8EE" opacity=".8"/><path d="M77 151C55 109 67 55 117 39c30-10 66 0 84 24 20-25 56-34 87-22 48 19 56 72 32 112-10 17-24 28-42 36H108c-15-8-24-21-31-38Z" fill="url(#body)" stroke="#23649A" stroke-width="8"/><path d="M91 102c-5-29 11-57 37-65 24-8 49 2 64 21-17 1-31 7-43 19-13 13-20 29-21 47-18-4-28-11-37-22Z" fill="#76BCE9"/><path d="M269 100c5-29-11-57-37-65-24-8-49 2-64 21 17 1 31 7 43 19 13 13 20 29 21 47 18-4 28-11 37-22Z" fill="#76BCE9"/><ellipse cx="126" cy="139" rx="55" ry="59" fill="#fff" stroke="#1E9F59" stroke-width="7"/><ellipse cx="234" cy="139" rx="55" ry="59" fill="#fff" stroke="#1E9F59" stroke-width="7"/><circle cx="132" cy="146" r="13" fill="#1267A8"/><circle cx="228" cy="146" r="13" fill="#1267A8"/><circle cx="128" cy="142" r="4" fill="#fff"/><circle cx="224" cy="142" r="4" fill="#fff"/><path d="M163 172c11 9 23 9 34 0" fill="none" stroke="#1267A8" stroke-width="5" stroke-linecap="round"/><path d="M180 147l-10 16h20Z" fill="#F2A62B" stroke="#C97916" stroke-width="3"/><path d="M99 219c21-22 43-30 81-30s60 8 81 30l17 119H82Z" fill="url(#coat)" stroke="#39708E" stroke-width="7"/><path d="M180 191v147" stroke="#C9DCE4" stroke-width="4"/><path d="M121 244l-34 52c-8 12-1 29 13 31 7 1 14-2 18-9l28-49Z" fill="#8ED0F4" stroke="#23649A" stroke-width="7"/><path d="M239 244l34 52c8 12 1 29-13 31-7 1-14-2-18-9l-28-49Z" fill="#8ED0F4" stroke="#23649A" stroke-width="7"/><rect x="113" y="247" width="50" height="69" rx="5" fill="#1E9F59" transform="rotate(-7 113 247)"/><path d="M121 263h30M119 276h29M117 290h26" stroke="#DDF7E9" stroke-width="5" stroke-linecap="round"/><path d="M191 238h35" stroke="#1E9F59" stroke-width="6" stroke-linecap="round"/><path d="M214 226v24M202 238h24" stroke="#1E9F59" stroke-width="5" stroke-linecap="round"/><path d="M143 339c-2 19 9 31 24 31 8 0 14-4 18-10 4 6 10 10 18 10 15 0 26-12 24-31" fill="none" stroke="#23649A" stroke-width="8" stroke-linecap="round"/><path d="M95 356c-13 5-21 14-25 27M265 356c13 5 21 14 25 27" fill="none" stroke="#F2A62B" stroke-width="8" stroke-linecap="round"/><path d="M80 72l-13-13M280 59l13-13M56 121H38M304 121h18" stroke="#16A88E" stroke-width="7" stroke-linecap="round"/><circle cx="65" cy="45" r="6" fill="#F2A62B"/><circle cx="296" cy="43" r="6" fill="#1E9F59"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 420" role="img" aria-labelledby="title desc">
+<title id="title">Jaga — Dokter Jaga mascot</title>
+<desc id="desc">Modern friendly owl doctor mascot with pointed ear tufts, smaller expressive eyes, white coat and clinical handbook.</desc>
+<defs>
+  <linearGradient id="head" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#75C4EF"/><stop offset="1" stop-color="#3F8FCC"/></linearGradient>
+  <linearGradient id="coat" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#E7F1F5"/></linearGradient>
+</defs>
+<ellipse cx="180" cy="395" rx="94" ry="13" fill="#DCE8EE" opacity=".75"/>
+<!-- new slimmer owl silhouette with pointed ear tufts -->
+<path d="M92 143C80 111 86 70 104 47L128 67C142 58 160 53 180 53C200 53 218 58 232 67L256 47C274 70 280 111 268 143C256 178 225 197 180 197C135 197 104 178 92 143Z" fill="url(#head)" stroke="#23649A" stroke-width="8" stroke-linejoin="round"/>
+<!-- face discs -->
+<ellipse cx="139" cy="127" rx="43" ry="49" fill="#FDFEFE" stroke="#1E9F59" stroke-width="7"/>
+<ellipse cx="221" cy="127" rx="43" ry="49" fill="#FDFEFE" stroke="#1E9F59" stroke-width="7"/>
+<circle cx="143" cy="132" r="10" fill="#1267A8"/><circle cx="217" cy="132" r="10" fill="#1267A8"/>
+<circle cx="140" cy="129" r="3.5" fill="#FFF"/><circle cx="214" cy="129" r="3.5" fill="#FFF"/>
+<!-- brow accents -->
+<path d="M111 91C123 83 136 81 149 84M211 84C224 81 237 83 249 91" fill="none" stroke="#23649A" stroke-width="6" stroke-linecap="round"/>
+<!-- beak and smile -->
+<path d="M180 133L169 150H191Z" fill="#F2A62B" stroke="#C97916" stroke-width="3"/>
+<path d="M164 158C173 166 187 166 196 158" fill="none" stroke="#1267A8" stroke-width="4.5" stroke-linecap="round"/>
+<!-- coat -->
+<path d="M117 207C132 192 151 185 180 185C209 185 228 192 243 207L267 337H93Z" fill="url(#coat)" stroke="#39708E" stroke-width="7"/>
+<path d="M180 188V337" stroke="#C9DCE4" stroke-width="4"/>
+<!-- left wing -->
+<path d="M116 220C96 226 79 247 77 270C76 286 88 297 101 291L130 255Z" fill="#69B7E8" stroke="#23649A" stroke-width="7" stroke-linejoin="round"/>
+<!-- right wing -->
+<path d="M244 220C264 226 281 247 283 270C284 286 272 297 259 291L230 255Z" fill="#69B7E8" stroke="#23649A" stroke-width="7" stroke-linejoin="round"/>
+<!-- handbook -->
+<rect x="106" y="239" width="47" height="70" rx="5" fill="#1E9F59" transform="rotate(-8 106 239)"/>
+<path d="M116 256L143 252M114 270L140 266M112 284L137 280" stroke="#DDF7E9" stroke-width="5" stroke-linecap="round"/>
+<!-- medical cross -->
+<path d="M207 232H237M222 217V247" stroke="#1E9F59" stroke-width="6" stroke-linecap="round"/>
+<!-- stethoscope -->
+<path d="M203 267C203 288 214 300 228 300C241 300 249 292 249 280" fill="none" stroke="#23649A" stroke-width="4" stroke-linecap="round"/>
+<circle cx="249" cy="280" r="7" fill="#F2A62B" stroke="#23649A" stroke-width="3"/>
+<!-- feet -->
+<path d="M139 338C137 355 146 367 160 367C169 367 176 363 180 356C184 363 191 367 200 367C214 367 223 355 221 338" fill="none" stroke="#23649A" stroke-width="8" stroke-linecap="round"/>
+<!-- small wing/energy accents -->
+<path d="M70 101H48M290 101H312M87 65L72 51M273 65L288 51" stroke="#16A88E" stroke-width="6" stroke-linecap="round"/>
+<circle cx="52" cy="133" r="6" fill="#F2A62B"/><circle cx="308" cy="133" r="6" fill="#1E9F59"/>
+</svg>
