@@ -11,9 +11,9 @@ export const metadata = {
   description: 'Clinical education dan practical resources untuk dokter Indonesia.',
   manifest: '/manifest.json',
   icons: {
-    icon: '/dokter-jaga-app-icon.svg',
-    shortcut: '/dokter-jaga-app-icon.svg',
-    apple: '/dokter-jaga-app-icon.svg',
+    icon: '/dokter-jaga-app-icon-v2.svg',
+    shortcut: '/dokter-jaga-app-icon-v2.svg',
+    apple: '/dokter-jaga-app-icon-v2.svg',
   },
 };
 
@@ -53,7 +53,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             <div className="sidebar-bottom"><div className="mini-card"><span className="mini-dot" /><div><strong>Clinical resources</strong><small>Updated regularly</small></div></div><p>Untuk edukasi. Verifikasi guideline, dosis, dan protokol lokal sebelum praktik.</p></div>
           </aside>
           <div className="main-shell">
-            <header className="topbar"><Brand mobile /><div className="top-search">⌕ <span>Cari kasus, diagnosis, obat, guideline...</span></div><div className="top-actions"><Link href="/membership" className="top-upgrade">Unlock more</Link><div className="avatar avatar-brand"><Image src="/dokter-jaga-app-icon.svg" alt="Dokter Jaga" width={34} height={34} /></div></div></header>
+            <header className="topbar"><Brand mobile /><div className="top-search">⌕ <span>Cari kasus, diagnosis, obat, guideline...</span></div><div className="top-actions"><Link href="/membership" className="top-upgrade">Unlock more</Link><div className="avatar avatar-brand"><Image src="/dokter-jaga-app-icon-v2.svg" alt="Dokter Jaga" width={34} height={34} /></div></div></header>
             <main>{children}</main>
             <footer>Dokter Jaga · Practical clinical education · 2026</footer>
           </div>
