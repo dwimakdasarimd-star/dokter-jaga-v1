@@ -4,6 +4,7 @@ import './mascot.css';
 import './cases/cases.css';
 import Link from 'next/link';
 import Image from 'next/image';
+import type { ReactNode } from 'react';
 
 export const metadata = {
   title: 'Dokter Jaga | Practical Clinical Education',
@@ -28,7 +29,7 @@ function Brand({ mobile = false }: { mobile?: boolean }) {
   );
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="id">
       <body>
