@@ -27,9 +27,9 @@ const nav = [
 
 function Brand({ mobile = false }: { mobile?: boolean }) {
   return (
-    <Link href="/" className={mobile ? 'brand brand-mobile brand-mascot-lockup' : 'brand brand-mascot-lockup'} aria-label="Dokter Jaga">
-      <span className="brand-mascot-wrap">
-        <Image src="/dokter-jaga-mascot.svg" alt="" width={mobile ? 38 : 48} height={mobile ? 44 : 54} priority />
+    <Link href="/" className={mobile ? 'brand brand-mobile brand-logo-lockup' : 'brand brand-logo-lockup'} aria-label="Dokter Jaga">
+      <span className="brand-mark-wrap">
+        <Image src="/dokter-jaga-mark.svg" alt="Dokter Jaga" width={mobile ? 36 : 42} height={mobile ? 36 : 42} priority />
       </span>
       <span className="brand-wordmark">
         <strong><span>Dokter</span><em>Jaga</em></strong>
