@@ -1,4 +1,4 @@
-import { ArrowRight, Activity, BookOpen, Calculator, HeartPulse, Hospital, Pill, ShieldCheck, Stethoscope, Syringe } from "lucide-react";
+import { ArrowRight, Activity, BookOpen, Calculator, HeartPulse, Pill, ShieldCheck, Syringe } from "lucide-react";
 
 const cases = [
   { tag: "Emergency", title: "Nyeri dada akut", desc: "ACS · differential diagnosis · initial management", icon: HeartPulse },
