@@ -6,9 +6,10 @@ import FluidGuide from './FluidGuide'
 import AcidBaseTool from './AcidBaseTool'
 import AdvancedCalculators from './AdvancedCalculators'
 
-type Tool = 'bmi' | 'egfr' | 'crcl' | 'bsa' | 'gcs' | 'map' | 'shock' | 'anion' | 'correctedNa' | 'pedsFluid' | 'tpm' | 'acidBase'
+type Tool = 'drugDosing' | 'bmi' | 'egfr' | 'crcl' | 'bsa' | 'gcs' | 'map' | 'shock' | 'anion' | 'correctedNa' | 'pedsFluid' | 'tpm' | 'acidBase'
 
 const toolCards = [
+  { id:'drugDosing' as Tool, icon:'💊', title:'Kalkulator Dosis Obat', category:'Medication', desc:'Hitung dosis obat berbasis indikasi, usia/populasi, berat badan, fungsi ginjal, rute, dan regimen.' },
   { id:'bmi' as Tool, icon:'⚖', title:'BMI', category:'General', desc:'Body mass index dari berat dan tinggi badan.' },
   { id:'bsa' as Tool, icon:'📐', title:'BSA', category:'General', desc:'Luas permukaan tubuh dengan Mosteller.' },
   { id:'egfr' as Tool, icon:'🫘', title:'eGFR CKD-EPI 2021', category:'Renal', desc:'Estimasi GFR berbasis kreatinin, usia, dan jenis kelamin.' },
@@ -54,7 +55,7 @@ export default function ToolsPage(){
   const maintenance=(()=>{const w=n(fluidWeight);if(!w||w<0)return NaN;return w<=10?w*4:w<=20?40+(w-10)*2:60+(w-20)})()
   const tpm=(()=>{const v=n(tpmVolume),h=n(tpmTime),f=n(dropFactor);if(!v||v<=0||!h||h<=0||!f)return {gtt:NaN,mlhr:NaN};return {gtt:(v*f)/(h*60),mlhr:v/h}})()
   const activeTitle=toolCards.find(t=>t.id===active)?.title
-  const selectTool=(id:Tool)=>{setActive(id);if(id!=='tpm')setTpmCalculated(false)}
+  const selectTool=(id:Tool)=>{if(id==='drugDosing'){window.location.href='/tools/dosing';return}setActive(id);if(id!=='tpm')setTpmCalculated(false)}
   const clearTPM=()=>{setTpmVolume('');setTpmTime('');setDropFactor('20');setTpmCalculated(false)}
 
   return <>
@@ -62,7 +63,7 @@ export default function ToolsPage(){
     <div className="section tools-page">
       <div className="section-kicker">Clinical Tools</div>
       <div className="tools-header"><div><h1>Clinical Tools</h1><p className="section-intro">Kalkulator klinis yang cepat, sederhana, dan transparan. Masukkan parameter pasien, lihat hasilnya, lalu verifikasi konteks klinis dan guideline.</p></div><div className="tools-count"><strong>{toolCards.length}</strong><span>tools aktif</span></div></div>
-      <div className="tool-search"><span>⌕</span><input value={query} onChange={e=>setQuery(e.target.value)} placeholder="Cari BMI, eGFR, TPM, GCS, acid–base..."/></div>
+      <div className="tool-search"><span>⌕</span><input value={query} onChange={e=>setQuery(e.target.value)} placeholder="Cari kalkulator dosis obat, BMI, eGFR, TPM, GCS, acid–base..."/></div>
       <div className="tool-layout">
         <aside className="tool-sidebar"><div className="tool-side-label">ALL TOOLS</div>{filtered.map(t=><button key={t.id} onClick={()=>selectTool(t.id)} className={`tool-nav ${active===t.id?'active':''}`}><span>{t.icon}</span><div><strong>{t.title}</strong><small>{t.category}</small></div></button>)}</aside>
         <main className="tool-workspace">
