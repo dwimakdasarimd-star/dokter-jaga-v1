@@ -2,10 +2,12 @@ import './globals.css';
 import './home.css';
 import './cases/cases.css';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export const metadata = {
   title: 'Dokter Jaga | Practical Clinical Education',
   description: 'Clinical education dan practical resources untuk dokter Indonesia.',
+  icons: { icon: '/dokter-jaga-mark.svg' },
 };
 
 const nav = [
@@ -16,13 +18,22 @@ const nav = [
   { href: '/library', label: 'Library', icon: '▤' },
 ];
 
+function Brand({ mobile = false }: { mobile?: boolean }) {
+  return (
+    <Link href="/" className={mobile ? 'brand brand-mobile' : 'brand'} aria-label="Dokter Jaga">
+      <Image src="/dokter-jaga-mark.svg" alt="" width={mobile ? 34 : 42} height={mobile ? 34 : 42} priority />
+      <span><strong>Dokter Jaga</strong><small>Belajar. Berpikir. Siap Praktik.</small></span>
+    </Link>
+  );
+}
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="id">
       <body>
         <div className="app-shell">
           <aside className="sidebar">
-            <Link href="/" className="brand"><span className="brand-mark">+</span><span><strong>Dokter Jaga</strong><small>Clinical Platform</small></span></Link>
+            <Brand />
             <div className="sidebar-label">WORKSPACE</div>
             <nav className="side-nav">{nav.map((item) => <Link href={item.href} key={item.href} className="side-link"><span className={`side-icon ${item.label === 'Emergency' ? 'danger-icon' : ''}`}>{item.icon}</span><span>{item.label}</span></Link>)}</nav>
             <div className="sidebar-label sidebar-label-spaced">LEARNING</div>
@@ -30,7 +41,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <div className="sidebar-bottom"><div className="mini-card"><span className="mini-dot" /><div><strong>Clinical resources</strong><small>Updated regularly</small></div></div><p>Untuk edukasi. Verifikasi guideline, dosis, dan protokol lokal sebelum praktik.</p></div>
           </aside>
           <div className="main-shell">
-            <header className="topbar"><div className="mobile-brand"><span className="brand-mark">+</span><strong>Dokter Jaga</strong></div><div className="top-search">⌕ <span>Cari kasus, diagnosis, obat, guideline...</span></div><div className="top-actions"><Link href="/membership" className="top-upgrade">Unlock more</Link><div className="avatar">DJ</div></div></header>
+            <header className="topbar"><Brand mobile /><div className="top-search">⌕ <span>Cari kasus, diagnosis, obat, guideline...</span></div><div className="top-actions"><Link href="/membership" className="top-upgrade">Unlock more</Link><div className="avatar">DJ</div></div></header>
             <main>{children}</main>
             <footer>Dokter Jaga · Practical clinical education · 2026</footer>
           </div>
