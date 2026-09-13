@@ -1,11 +1,8 @@
 'use client';
 
 import { FormEvent, useState } from 'react';
-import { useSearchParams } from 'next/navigation';
 
 export default function LoginPage() {
-  const searchParams = useSearchParams();
-  const next = searchParams.get('next') || '/';
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -15,6 +12,7 @@ export default function LoginPage() {
     event.preventDefault();
     setError('');
     setLoading(true);
+    const next = new URLSearchParams(window.location.search).get('next') || '/';
     try {
       const response = await fetch('/api/auth/login', {
         method: 'POST',
