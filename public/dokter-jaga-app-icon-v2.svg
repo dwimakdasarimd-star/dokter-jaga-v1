@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+<title id="title">Dokter Jaga — Jaga Icon</title>
+<desc id="desc">A compact original owl mascot icon for Dokter Jaga.</desc>
+<rect width="256" height="256" rx="56" fill="#0B2538"/>
+<!-- simplified owl silhouette -->
+<path d="M52 112C48 72 72 40 108 39c18 0 31 7 40 19 9-12 22-19 40-19 36 1 60 33 56 73-4 39-30 67-68 72h-40c-38-5-64-33-68-72Z" fill="#72B9E7" stroke="#D9F2F8" stroke-width="7"/>
+<!-- ear tufts -->
+<path d="M63 75 51 49c-2-5 4-9 9-6l30 18M193 61l30-18c5-3 11 1 9 6l-12 26" fill="#4D9DDB" stroke="#D9F2F8" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<!-- face mask -->
+<path d="M128 78c-38 0-67 22-67 58 0 34 29 58 67 58s67-24 67-58c0-36-29-58-67-58Z" fill="#F8FCFD"/>
+<!-- eyes -->
+<circle cx="101" cy="127" r="27" fill="#FFFFFF" stroke="#168B5B" stroke-width="6"/>
+<circle cx="155" cy="127" r="27" fill="#FFFFFF" stroke="#168B5B" stroke-width="6"/>
+<circle cx="104" cy="130" r="8" fill="#0E5D91"/><circle cx="152" cy="130" r="8" fill="#0E5D91"/>
+<circle cx="102" cy="127" r="2.5" fill="#FFFFFF"/><circle cx="150" cy="127" r="2.5" fill="#FFFFFF"/>
+<!-- beak -->
+<path d="M128 132l-8 12h16Z" fill="#F2A62B"/>
+<!-- subtle smile -->
+<path d="M118 151c7 6 13 6 20 0" fill="none" stroke="#0E5D91" stroke-width="4" stroke-linecap="round"/>
+<!-- medical cross badge -->
+<circle cx="205" cy="202" r="29" fill="#FFFFFF" stroke="#0B2538" stroke-width="5"/>
+<path d="M205 187v30M190 202h30" stroke="#168B5B" stroke-width="7" stroke-linecap="round"/>
+</svg>
