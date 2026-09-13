@@ -1,0 +1,17 @@
+{
+  "name": "Dokter Jaga",
+  "short_name": "Dokter Jaga",
+  "description": "Practical clinical education untuk dokter Indonesia.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F7FAFC",
+  "theme_color": "#0B3150",
+  "icons": [
+    {
+      "src": "/dokter-jaga-app-icon.svg",
+      "sizes": "256x256",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
