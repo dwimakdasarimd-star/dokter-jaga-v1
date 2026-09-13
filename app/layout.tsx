@@ -22,9 +22,20 @@ const nav = [
 
 function Brand({ mobile = false }: { mobile?: boolean }) {
   return (
-    <Link href="/" className={mobile ? 'brand brand-mobile' : 'brand'} aria-label="Dokter Jaga">
-      <Image src="/dokter-jaga-mark.svg" alt="" width={mobile ? 34 : 42} height={mobile ? 34 : 42} priority />
-      <span><strong>Dokter Jaga</strong><small>Belajar. Berpikir. Siap Praktik.</small></span>
+    <Link href="/" className={mobile ? 'brand brand-mobile brand-mascot-lockup' : 'brand brand-mascot-lockup'} aria-label="Dokter Jaga">
+      <span className="brand-mascot-wrap">
+        <Image
+          src="/dokter-jaga-mascot.svg"
+          alt=""
+          width={mobile ? 38 : 48}
+          height={mobile ? 44 : 54}
+          priority
+        />
+      </span>
+      <span className="brand-wordmark">
+        <strong><span>Dokter</span><em>Jaga</em></strong>
+        <small>Belajar. Berpikir. Siap Praktik.</small>
+      </span>
     </Link>
   );
 }
@@ -43,7 +54,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             <div className="sidebar-bottom"><div className="mini-card"><span className="mini-dot" /><div><strong>Clinical resources</strong><small>Updated regularly</small></div></div><p>Untuk edukasi. Verifikasi guideline, dosis, dan protokol lokal sebelum praktik.</p></div>
           </aside>
           <div className="main-shell">
-            <header className="topbar"><Brand mobile /><div className="top-search">⌕ <span>Cari kasus, diagnosis, obat, guideline...</span></div><div className="top-actions"><Link href="/membership" className="top-upgrade">Unlock more</Link><div className="avatar">DJ</div></div></header>
+            <header className="topbar"><Brand mobile /><div className="top-search">⌕ <span>Cari kasus, diagnosis, obat, guideline...</span></div><div className="top-actions"><Link href="/membership" className="top-upgrade">Unlock more</Link><div className="avatar avatar-brand"><Image src="/dokter-jaga-app-icon.svg" alt="Dokter Jaga" width={34} height={34} /></div></div></header>
             <main>{children}</main>
             <footer>Dokter Jaga · Practical clinical education · 2026</footer>
           </div>
