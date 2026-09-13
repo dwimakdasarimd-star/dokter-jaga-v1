@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import type { ReactNode } from 'react'
 import FluidGuideStyles from './FluidGuideStyles'
 
 const fluids = [
@@ -30,7 +31,7 @@ const scenarios = [
   ['Pediatrics','Isotonic crystalloid for resuscitation/maintenance as indicated','Dose by weight, reassess after boluses, and account for glucose/electrolyte needs.'],
 ]
 
-function Chip({children}:{children:React.ReactNode}){return <span className="iv-chip">{children}</span>}
+function Chip({children}:{children:ReactNode}){return <span className="iv-chip">{children}</span>}
 
 export default function FluidGuide(){
   const [tab,setTab]=useState<'decision'|'selector'|'fluids'|'monitor'>('decision')
