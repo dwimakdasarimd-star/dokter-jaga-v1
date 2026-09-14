@@ -5,6 +5,7 @@ import './cases/cases.css';
 import './mobile.css';
 import './emergency/pomr.css';
 import './modern-ui.css';
+import './interface-fix.css';
 import Link from 'next/link';
 import Image from 'next/image';
 import type { ReactNode } from 'react';
