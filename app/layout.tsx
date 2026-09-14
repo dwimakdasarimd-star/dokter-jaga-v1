@@ -2,6 +2,7 @@ import './globals.css';
 import './home.css';
 import './mascot.css';
 import './cases/cases.css';
+import './mobile.css';
 import Link from 'next/link';
 import Image from 'next/image';
 import type { ReactNode } from 'react';
@@ -39,6 +40,19 @@ function Brand({ mobile = false }: { mobile?: boolean }) {
   );
 }
 
+function MobileNav() {
+  return (
+    <nav className="mobile-bottom-nav" aria-label="Navigasi utama mobile">
+      {nav.map((item) => (
+        <Link href={item.href} key={item.href} className={`mobile-nav-item ${item.label === 'Emergency' ? 'mobile-nav-emergency' : ''}`}>
+          <span>{item.icon}</span>
+          <small>{item.label === 'Clinical Tools' ? 'Tools' : item.label === 'Clinical Cases' ? 'Cases' : item.label}</small>
+        </Link>
+      ))}
+    </nav>
+  );
+}
+
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="id">
@@ -57,6 +71,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             <main>{children}</main>
             <footer>Dokter Jaga · Practical clinical education · 2026</footer>
           </div>
+          <MobileNav />
         </div>
       </body>
     </html>
