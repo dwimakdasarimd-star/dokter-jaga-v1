@@ -1,20 +1,31 @@
 'use client';
 import {useEffect,useMemo,useState} from 'react';
-import {Activity,Brain,Bug,HeartPulse,Lungs,Pill,ShieldAlert,Stethoscope} from 'lucide-react';
 import cases from './data';
 import vignettes from './vignettes';
 import POMRClinicalCaseView from './POMRClinicalCaseView';
 
+type IconKind='heart'|'lungs'|'alert'|'bug'|'brain'|'pill'|'activity'|'stethoscope';
 function CaseIcon({title,department}:{title:string;department:string}){
  const t=title.toLowerCase();
- if(t.includes('stemi')||t.includes('pulmonary edema')) return <HeartPulse aria-hidden="true"/>;
- if(t.includes('asma')||t.includes('copd')) return <Lungs aria-hidden="true"/>;
- if(t.includes('anafilaksis')) return <ShieldAlert aria-hidden="true"/>;
- if(t.includes('septic')||department==='Infectious Disease') return <Bug aria-hidden="true"/>;
- if(t.includes('stroke')||t.includes('intracerebral')||t.includes('epileptic')) return <Brain aria-hidden="true"/>;
- if(t.includes('drug')||t.includes('overdose')||t.includes('poison')) return <Pill aria-hidden="true"/>;
- if(t.includes('shock')||t.includes('dka')||department==='Emergency') return <Activity aria-hidden="true"/>;
- return <Stethoscope aria-hidden="true"/>;
+ let kind:IconKind='stethoscope';
+ if(t.includes('stemi')||t.includes('pulmonary edema')) kind='heart';
+ else if(t.includes('asma')||t.includes('copd')) kind='lungs';
+ else if(t.includes('anafilaksis')) kind='alert';
+ else if(t.includes('septic')||department==='Infectious Disease') kind='bug';
+ else if(t.includes('stroke')||t.includes('intracerebral')||t.includes('epileptic')) kind='brain';
+ else if(t.includes('drug')||t.includes('overdose')||t.includes('poison')) kind='pill';
+ else if(t.includes('shock')||t.includes('dka')||department==='Emergency') kind='activity';
+ const paths:Record<IconKind,string>={
+  heart:'M12 21s-7-4.35-9.5-9A5.4 5.4 0 0 1 12 5.1 5.4 5.4 0 0 1 21.5 12C19 16.65 12 21 12 21Z M3 12h4l1.5-3 2.2 6 2-4 1.3 2H21',
+  lungs:'M12 3v7 M12 10c-1.8-2.8-4-4.1-5.6-3.2C4.4 8 4 13 4.4 17c.3 2.6 2 4 4.2 3.4 2.1-.6 3.1-3.1 3.4-6.4 M12 10c1.8-2.8 4-4.1 5.6-3.2 2 .9 2.4 6 1.9 10.2-.3 2.6-2 4-4.2 3.4-2.1-.6-3.1-3.1-3.4-6.4',
+  alert:'M12 3 22 20H2L12 3Z M12 9v5 M12 17h.01',
+  bug:'M9 8V5h6v3 M8 12H4m16 0h-4M8 16l-3 3m11-3 3 3 M9 8h6a4 4 0 0 1 4 4v3a4 4 0 0 1-4 4H9a4 4 0 0 1-4-4v-3a4 4 0 0 1 4-4Z',
+  brain:'M9 4a3 3 0 0 0-3 3 3 3 0 0 0-2 5 3 3 0 0 0 2 5 3 3 0 0 0 3 3h1V4H9Zm6 0a3 3 0 0 1 3 3 3 3 0 0 1 2 5 3 3 0 0 1-2 5 3 3 0 0 1-3 3h-1V4h1Z M9 8h2m-2 4h2m4-4h-2m2 4h-2',
+  pill:'M7 4a3 3 0 0 1 4.2 0l8.8 8.8a3 3 0 0 1 0 4.2l-1 1a3 3 0 0 1-4.2 0L6 9.2A3 3 0 0 1 6 5l1-1Z M8 9l6-6',
+  activity:'M3 12h4l2-5 3 10 2-5h7',
+  stethoscope:'M6 4v5a6 6 0 0 0 12 0V4 M6 4H4m2 0h2m6 0h2m-2 0v5 M18 15v2a4 4 0 0 1-8 0v-2'
+ };
+ return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" width="26" height="26" aria-hidden="true"><path d={paths[kind]}/></svg>;
 }
 
 export default function CasesPage(){
