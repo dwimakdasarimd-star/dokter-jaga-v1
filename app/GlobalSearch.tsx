@@ -1,0 +1,5 @@
+'use client';
+import {useMemo,useState} from 'react';
+import {useRouter} from 'next/navigation';
+const items=[['Clinical Cases','50 kasus POMR','/cases'],['Emergency','100 emergency cases','/emergency'],['Clinical Tools','32 kalkulator klinis','/tools'],['Library','Guideline & referensi','/library']];
+export default function GlobalSearch(){const r=useRouter();const[v,setV]=useState('');const[o,setO]=useState(false);const res=useMemo(()=>{const q=v.toLowerCase();return items.filter(x=>!q||x[0].toLowerCase().includes(q)||x[1].toLowerCase().includes(q))},[v]);return <div className="global-search-wrap"><div className="global-search"><span>⌕</span><input value={v} onChange={e=>{setV(e.target.value);setO(true)}} onFocus={()=>setO(true)} onKeyDown={e=>{if(e.key==='Enter')r.push('/cases?search='+encodeURIComponent(v));if(e.key==='Escape')setO(false)}} placeholder="Cari kasus, diagnosis, obat, atau guideline..."/><kbd>⌘ K</kbd></div>{o&&<div className="global-search-results"><small>QUICK ACCESS</small>{res.map(x=><button key={x[0]} onClick={()=>r.push(x[2])}><b>{x[0]}</b><span>{x[1]}</span><i>→</i></button>)}{!res.length&&<p>Tidak ada hasil.</p>}</div>}</div>}
