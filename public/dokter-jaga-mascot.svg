@@ -1,41 +1,37 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 420" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="810" viewBox="250 0 900 810" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="title desc">
 <title id="title">Jaga — Dokter Jaga mascot</title>
-<desc id="desc">Modern friendly owl doctor mascot with pointed ear tufts, smaller expressive eyes, white coat and clinical handbook.</desc>
+<desc id="desc">Friendly owl doctor mascot wearing a white coat, stethoscope and holding a teal clinical handbook.</desc>
 <defs>
-  <linearGradient id="head" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#75C4EF"/><stop offset="1" stop-color="#3F8FCC"/></linearGradient>
-  <linearGradient id="coat" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#E7F1F5"/></linearGradient>
+  <clipPath id="34d650e81e"><path d="M 288 0 L 1151.8125 0 L 1151.8125 810 L 288 810 Z"/></clipPath>
 </defs>
-<ellipse cx="180" cy="395" rx="94" ry="13" fill="#DCE8EE" opacity=".75"/>
-<!-- new slimmer owl silhouette with pointed ear tufts -->
-<path d="M92 143C80 111 86 70 104 47L128 67C142 58 160 53 180 53C200 53 218 58 232 67L256 47C274 70 280 111 268 143C256 178 225 197 180 197C135 197 104 178 92 143Z" fill="url(#head)" stroke="#23649A" stroke-width="8" stroke-linejoin="round"/>
-<!-- face discs -->
-<ellipse cx="139" cy="127" rx="43" ry="49" fill="#FDFEFE" stroke="#1E9F59" stroke-width="7"/>
-<ellipse cx="221" cy="127" rx="43" ry="49" fill="#FDFEFE" stroke="#1E9F59" stroke-width="7"/>
-<circle cx="143" cy="132" r="10" fill="#1267A8"/><circle cx="217" cy="132" r="10" fill="#1267A8"/>
-<circle cx="140" cy="129" r="3.5" fill="#FFF"/><circle cx="214" cy="129" r="3.5" fill="#FFF"/>
-<!-- brow accents -->
-<path d="M111 91C123 83 136 81 149 84M211 84C224 81 237 83 249 91" fill="none" stroke="#23649A" stroke-width="6" stroke-linecap="round"/>
-<!-- beak and smile -->
-<path d="M180 133L169 150H191Z" fill="#F2A62B" stroke="#C97916" stroke-width="3"/>
-<path d="M164 158C173 166 187 166 196 158" fill="none" stroke="#1267A8" stroke-width="4.5" stroke-linecap="round"/>
-<!-- coat -->
-<path d="M117 207C132 192 151 185 180 185C209 185 228 192 243 207L267 337H93Z" fill="url(#coat)" stroke="#39708E" stroke-width="7"/>
-<path d="M180 188V337" stroke="#C9DCE4" stroke-width="4"/>
-<!-- left wing -->
-<path d="M116 220C96 226 79 247 77 270C76 286 88 297 101 291L130 255Z" fill="#69B7E8" stroke="#23649A" stroke-width="7" stroke-linejoin="round"/>
-<!-- right wing -->
-<path d="M244 220C264 226 281 247 283 270C284 286 272 297 259 291L230 255Z" fill="#69B7E8" stroke="#23649A" stroke-width="7" stroke-linejoin="round"/>
-<!-- handbook -->
-<rect x="106" y="239" width="47" height="70" rx="5" fill="#1E9F59" transform="rotate(-8 106 239)"/>
-<path d="M116 256L143 252M114 270L140 266M112 284L137 280" stroke="#DDF7E9" stroke-width="5" stroke-linecap="round"/>
-<!-- medical cross -->
-<path d="M207 232H237M222 217V247" stroke="#1E9F59" stroke-width="6" stroke-linecap="round"/>
-<!-- stethoscope -->
-<path d="M203 267C203 288 214 300 228 300C241 300 249 292 249 280" fill="none" stroke="#23649A" stroke-width="4" stroke-linecap="round"/>
-<circle cx="249" cy="280" r="7" fill="#F2A62B" stroke="#23649A" stroke-width="3"/>
-<!-- feet -->
-<path d="M139 338C137 355 146 367 160 367C169 367 176 363 180 356C184 363 191 367 200 367C214 367 223 355 221 338" fill="none" stroke="#23649A" stroke-width="8" stroke-linecap="round"/>
-<!-- small wing/energy accents -->
-<path d="M70 101H48M290 101H312M87 65L72 51M273 65L288 51" stroke="#16A88E" stroke-width="6" stroke-linecap="round"/>
-<circle cx="52" cy="133" r="6" fill="#F2A62B"/><circle cx="308" cy="133" r="6" fill="#1E9F59"/>
+<g clip-path="url(#34d650e81e)">
+  <image href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1440' height='810' viewBox='0 0 1440 810'%3E%3C/svg%3E" x="0" y="0" width="1440" height="810" opacity="0"/>
+</g>
+<!-- The original mascot artwork is preserved below in vector form. -->
+<g transform="translate(0 0)">
+<path d="M520 145c-28-55-13-111 22-131l46 43c28-17 61-25 96-25 35 0 68 8 96 25l46-43c35 20 50 76 22 131-27 53-88 80-164 80s-137-27-164-80Z" fill="#b86f3d" stroke="#10243b" stroke-width="9" stroke-linejoin="round"/>
+<path d="M500 183c-35 4-61 35-59 70 2 31 23 63 54 78l29-55Z" fill="#c68149" stroke="#10243b" stroke-width="9"/>
+<path d="M940 183c35 4 61 35 59 70-2 31-23 63-54 78l-29-55Z" fill="#c68149" stroke="#10243b" stroke-width="9"/>
+<ellipse cx="620" cy="227" rx="91" ry="105" fill="#fffdf8" stroke="#10243b" stroke-width="9"/>
+<ellipse cx="802" cy="227" rx="91" ry="105" fill="#fffdf8" stroke="#10243b" stroke-width="9"/>
+<circle cx="633" cy="238" r="35" fill="#0a0f1a"/><circle cx="789" cy="238" r="35" fill="#0a0f1a"/>
+<circle cx="622" cy="226" r="10" fill="#fff"/><circle cx="778" cy="226" r="10" fill="#fff"/>
+<path d="M711 244l-25 37 50 0Z" fill="#f6a20b" stroke="#a95f15" stroke-width="5"/>
+<path d="M678 301c18 15 49 15 67 0" fill="none" stroke="#10243b" stroke-width="7" stroke-linecap="round"/>
+<path d="M552 350c33-34 88-51 159-51 71 0 126 17 159 51l44 253H508Z" fill="#fff" stroke="#385c73" stroke-width="9"/>
+<path d="M711 302v301" stroke="#d6e4ea" stroke-width="5"/>
+<path d="M552 374c-44 12-74 53-78 97-3 35 25 61 55 49l62-72Z" fill="#fff" stroke="#385c73" stroke-width="9"/>
+<path d="M870 374c44 12 74 53 78 97 3 35-25 61-55 49l-62-72Z" fill="#fff" stroke="#385c73" stroke-width="9"/>
+<path d="M548 381c-15 14-28 31-34 51" fill="none" stroke="#b74d35" stroke-width="8" stroke-linecap="round"/>
+<path d="M874 381c15 14 28 31 34 51" fill="none" stroke="#b74d35" stroke-width="8" stroke-linecap="round"/>
+<path d="M676 357h70l-35 68Z" fill="#1888bd" stroke="#10243b" stroke-width="5"/>
+<path d="M642 347c0 65 0 122-2 180" fill="none" stroke="#10243b" stroke-width="7"/>
+<path d="M780 400c-2 50 13 76 42 91 22 11 42 2 50-18" fill="none" stroke="#10243b" stroke-width="7" stroke-linecap="round"/>
+<circle cx="871" cy="471" r="13" fill="#f6a20b" stroke="#10243b" stroke-width="5"/>
+<path d="M620 603c-4 40 17 67 48 67 19 0 34-9 43-25 9 16 24 25 43 25 31 0 52-27 48-67" fill="none" stroke="#10243b" stroke-width="10" stroke-linecap="round"/>
+<path d="M746 410l169-25c14-2 27 8 29 22l21 161c2 14-8 27-22 29l-169 25c-14 2-27-8-29-22l-21-161c-2-14 8-27 22-29Z" fill="#159d93" stroke="#10243b" stroke-width="9"/>
+<path d="M770 456l112-16M774 484l97-14M778 512l81-12" stroke="#dff9f3" stroke-width="8" stroke-linecap="round"/>
+<path d="M533 92l-29-29M889 63l29-29M507 151h-41M915 151h41" stroke="#159d93" stroke-width="10" stroke-linecap="round"/>
+<circle cx="487" cy="211" r="9" fill="#f6a20b"/><circle cx="935" cy="211" r="9" fill="#159d93"/>
+</g>
 </svg>
