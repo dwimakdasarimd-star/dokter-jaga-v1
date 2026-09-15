@@ -7,6 +7,7 @@ import './emergency/pomr.css';
 import './modern-ui.css';
 import './interface-fix.css';
 import './interface-overhaul.css';
+import './clinical-theme.css';
 import Link from 'next/link';
 import Image from 'next/image';
 import type { ReactNode } from 'react';
